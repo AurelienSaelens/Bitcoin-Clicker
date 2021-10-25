@@ -1,11 +1,10 @@
 body {
-    background: linear-gradient( rgb(73, 71, 71) , black );
-    height: 100vh;
-    width: 100vw;
+    background-color: black;
 }
 
-#bitcoin {
-    cursor: grab;
+h1, h2, h3{
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
 }
 
 footer {
@@ -19,23 +18,60 @@ footer {
     background-color: #c09725;
 }
 
+.wallet {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.wallet img:hover{ 
+    transform: scale(1.02);
+}
+.wallet img:active{ 
+    transform: scale(0.98);
+}
+
+.clickercontainer {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+}
+.clickercontainer img:hover{ 
+    transform: scale(1.02);
+}
+.clickercontainer img:active{ 
+    transform: scale(0.98);
+}
+
 .row {
-    justify-content: center;
-    margin: 25px 20px;
+    position: absolute;
+    right: 10%;
+    top: 25%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    padding-right: 0%;
 }
 
 .btn {
-    text-align: center;
     font-size: 0.8em;
-    justify-self: center;
     width: 86.5px;
-    display: block;
+}
+.btn:active {
+    filter: grayscale(0.2) brightness(1.2);
+    transform: scale(0.95);
+}
+.btn,
+.btn-price p {
+    text-decoration: none;
+}
+.btn-price p {
+    margin-top: 5px;
+    font-size: 1.6em;
+    color: #808080;
+    padding: 4px 2px;
 }
 .btn img {
+    justify-self: center;
     width: 70%;
-    transition: all .1s ease-in-out; 
 }
 
 

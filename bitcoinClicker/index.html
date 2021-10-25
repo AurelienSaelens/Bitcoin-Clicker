@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODE CLICKER</title>
+    <title>BITCOIN CLICKER</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+    <h1 style="color: #c09725;">Bitcoin Clicker</h1>
+    <h2 style="color: #FFF;">Click to get more coins!</h2>
+    <h3 style="color: #c09725;">We always need more...</h3>
     <header>
-        <h1 style="color: #c09725;">Bitcoin clicker</h1>
-        <h3 style="color: #c09725;">Click to get more coins!</h3>
-        <p style="color: #c09725;">we always need more...</p>
         <article id="scoredisplay">
-            <h1 id="points-score"> Score : </h1>
-                <span class="score" id="score" style="color: #c09725; text-align: center;">0</span>
+            <h1 style="color: white;" id="points-score">
+                <span style="color: #c09725;" id="score">
+                    0
+                </span>
+                bitcoins
+            </h1>
+        </article>
+    </section>
     </header>
     <main>
-    <div id="bitcoin">
         <picture class="clickercontainer">
-            <img id="change- image" onclick="addcoins(1, addPower, bonus)" src="media/imgprincipale.png" class="clicker" alt="image de PC">
+            <img id="clickercontainer" onclick="addToscore(1, addPower)" src="media/imgprincipale.png" class="clicker">
         </picture>
-    </div>  
-
-        <section class="row">
-
-            <a href="#" id ="btn-autoclicker" class="btn blue disable" onclick="">
-                <img src="media/xpbronze.png" alt="auto-clicker icon">
-            </a>
+        <picture class="wallet">
+            <img width="250px" height="250px" id="reset-button" onclick="reset(restart_button)" src="media/imgwallet.png" alt="">
+        </picture>
+    <section class="row">
+        <a href="#" id ="btn-autoclicker" class="btn bronze disable" onclick="">
+            <p class="btn-name" style="color: #c09725;">auto clicker</p>
+                <img src="media/xpbronze.png">
+                    <section class="btn-price">
+                <p><span id="autoClickerPrice">100</span><span class="money-icon"></span></p>
+             </section>
+        </a>
             <a href="#" id ="btn-bonus" class="btn grey disable" onclick="">
-                <img src="media/xpgrey.png" alt="auto-clicker icon">
-            </a>
-            <a href="#" id ="btn-multiplier" class="btn gold disable" onclick="">
-                <img src="media/imgxp.png" alt="multiplier icon">
-            </a>
-        </section>
+                <p class="btn-name" style="color: #c09725;">bonus - 30s x2</p>
+                <img src="media/xpgrey.png">
+            <section class="btn-price">
+                <p><span id="bonusPrice">300</span><span class="money-icon"></span></p>
+            </section>
+        </a>
+            <a href="#" id ="btn-multiplicator" class="btn gold disable" onclick="">
+                <p class="btn-name" style="color: #c09725;">multiplicator x5</p>
+                    <img src="media/imgxp.png">
+                    <section class="btn-price">
+                <p><span id="multiplierPrice">2000</span><span class="money-icon"></span></p>
+            </section>
+        </a>
         </section>
     </main>
     <footer>
-        <p>©Aurélien Saelens</p>
-        <p>©Nicolas Biren</p>
-        <p>©Ammar Alsharek</p>
+        <p>© Aurélien Saelens</p>
+        <p>© Nicolas Biren</p>
+        <p>© Ammar Alsharek</p>
     </footer>
-    <script src="js.js"></script>
+    <script src="Script.js"></script>
 </body>
 </html>
