@@ -4,25 +4,15 @@ body {
     width: 100vw;
 }
 
-.bitcoin {
-    position: absolute;
-    top: 20%;
-}
-
-.bitcoin:hover {
-    color: chartreuse;
-    box-shadow: 0 0 3px #14e4ff;
-    text-shadow: 0 0 3px #14e4ff;
-    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-    animation: rotate 1.5s linear infinite;
-    border-radius: 90%
+#bitcoin {
+    cursor: grab;
 }
 
 footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
