@@ -4,32 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="">
+    <meta name="Description" content="Author: Pauline Rohmer, Thomas Quertinmont, Gonzalo Silva, Marc Houtreille">
     <title>CODE CLICKER</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Bitcoin Clicker</h1>
-    <h3>Click to get more coins</h3>
+    <header>
+        <h1 style="color: #c09725;">Bitcoin clicker</h1>
+        <h3 style="color: #c09725;">Click to get more coins!</h3>
+        <p style="color: #c09725;">we always need more...</p>
+        <article id="scoredisplay">
+            <h1 id="points-score"> Score : </h1>
+                <span id="score"> 0 </span>
+    </header>
+    <main>
+    <div id="bitcoin">
+        <picture class="clickercontainer">
+            <img id="change- image" onclick="addcoins(1, addPower, bonus)" src="media/imgprincipale.png" class="clicker" alt="image de PC">
+        </picture>
+    </div>  
 
-    <span id="score">
-        Score : 0
-    </span>
+        <section class="row">
 
-    <div class="bitcoin">
-        <img id="bitcoin-click" class="bitcoin-click" src="media/imgprincipale.png" alt="">
-    </div>
-    <div class="xp-gold">
-        <img src="media/imgxp.png" alt="">
-    </div>
-
-
+            <a href="#" id ="btn-autoclicker" class="btn blue disable" onclick="">
+                <img src="media/xpbronze.png" alt="auto-clicker icon">
+            </a>
+            <a href="#" id ="btn-bonus" class="btn grey disable" onclick="">
+                <img src="media/xpgrey.png" alt="auto-clicker icon">
+            </a>
+            <a href="#" id ="btn-multiplier" class="btn gold disable" onclick="">
+                <img src="media/imgxp.png" alt="multiplier icon">
+            </a>
+        </section>
+        </section>
+    </main>
     <footer>
         <p>©Aurélien Saelens</p>
         <p>©Nicolas Biren</p>
-        <p>©Amar Alsharek</p>
+        <p>©Ammar Alsharek</p>
     </footer>
-    <script src="Script.js"></script>
-</body>
-</html>
+    <script src="js.js"></script>
