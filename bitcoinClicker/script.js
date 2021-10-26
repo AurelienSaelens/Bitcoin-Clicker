@@ -54,9 +54,9 @@ function reset () {
         nbUpgradeOne = 0;         
         nbUpgradeTwo = 1;
         nbUpgradeThree = 5;
-		time = 29;
-		spanUpgradeThirdmulti.innerHTML = nbUpgradeThree;
-		addScoreClick = 1;
+	time = 29;
+	spanUpgradeThirdmulti.innerHTML = nbUpgradeThree;
+	addScoreClick = 1;
         updateDom();
 }
 
@@ -65,7 +65,7 @@ function reset () {
 function upgradeOneFun() {
 	if (spanUpgradeOne.classList.contains("active")) {
 		if (nbUpgradeOne == 0) {
-			setInterval(addPointsEverySecond, 1000);
+		setInterval(addPointsEverySecond, 1000);
 		}
 		nbUpgradeOne++;
 		score -= 100;
