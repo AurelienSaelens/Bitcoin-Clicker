@@ -77,5 +77,29 @@ span.active {
     color: #fff;
 }
 
+@media screen and (max-width: 600px) {
+    .wallet {
+        position: absolute;
+        transform: translate3D(-10%, 20%, 0);
+        max-width: 10px;
+}
+    .row {
+        right: 1%;
+        height: 20%;
+        top: 1%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .wallet {
+        position: absolute;
+        width: 10px;
+    }
+    .row {
+        right: 1%;
+        height: 20%;
+        top: 1%;
+    }
+}
+
 
 
