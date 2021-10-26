@@ -1,12 +1,11 @@
 // general varabiales
 let time = 0;
 
-let score = 0;           		// score
+let score = 123456789;           		// score
 let addScoreClick = 1;          // how many add?
 let nbUpgradeOne = 0;           // number of upgrade one & how much add each second
 let nbUpgradeTwo = 1;
 let nbUpgradeThree = 5;
-
 let statusUpgradeTwo = 0;
 
 // elements variables
