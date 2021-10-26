@@ -46,7 +46,7 @@ footer {
 .row {
     position: absolute;
     right: 10%;
-    top: 25%;
+    top: 15%;
     display: grid;
     padding-right: 0%;
 }
@@ -73,5 +73,9 @@ footer {
     justify-self: center;
     width: 70%;
 }
+span.active {
+    color: #fff;
+}
+
 
 
