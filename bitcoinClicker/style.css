@@ -1,14 +1,116 @@
-body {
-    background-color: black;
+/* VARIABLES */
+
+:root {
+    --color-gold: #c09725;
+    --color-black: #000;
+    --color-white: #FFF;
+    --color-grey: #808080;
 }
 
+/* RESET */ 
 
-h1, h2, h3 {
-    font-family: 'Dancing Script', cursive;
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+body {
+    height: 100vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* STYLE */
+
+body {
+    background-color: var(--color-black);
+}
+.title {
+    padding-top: 20px;
     text-align: center;
 }
 
+h1, h3 {
+    color: var(--color-gold);
+}
+
+h2 {
+    color: var(--color-white);
+}
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+    line-height: 50px;
+}
+
+#scoredisplay h1{
+    font-size: 25px;
+}
+
+#scoredisplay span {
+    color: var(--color-white);
+}
+
+#points-score {
+    text-align: center;
+}
+
+.clickercontainer {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    float: left;
+    margin-left: 150px;
+    top: -55px;
+}
+
+.clickercontainer img {
+    width: 380px;
+    height: 380px;
+}
+
+.row {
+    position: relative;
+    width: 100px;
+    float: right;
+    margin-right: 150px;
+    top: -150px;
+}
+
+.row .row-btn {
+    padding-top: 50px;
+}
+.row img {
+    width: 65px;
+    height: 65px;
+    left: 50%;
+    padding-top: 8px;
+}
+
+span.active {
+    color: var(--color-white);
+}
+
+.wallet {
+    position: absolute;
+    clear: both;
+    width: 250px;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 75px;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+img:active {
+    transform: scale(0.98);
+}
 
 footer {
     display: flex;
@@ -18,92 +120,62 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #c09725;
-}
-  
-.wallet {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.wallet img:hover{ 
-    transform: scale(1.02);
-}
-.wallet img:active{ 
-    transform: scale(0.98);
+    padding: 15px 0;
+    background-color: var(--color-gold);
 }
 
-.clickercontainer {
-    position: absolute;
-    left: 10%;
-    top: 25%;
-}
-.clickercontainer img:hover{ 
-    transform: scale(1.02);
+.btn-price {
+    color: var(--color-grey);
     
 }
-.clickercontainer img:active{ 
-    transform: scale(0.98);
+
+.row p {
+    font-size: 15px;
 }
 
-.row {
-    position: absolute;
-    right: 10%;
-    top: 15%;
-    display: grid;
-    padding-right: 0%;
+.btn-name {
+    color: var(--color-gold);
 }
 
-.btn {
-    font-size: 0.8em;
-    width: 86.5px;
-}
-.btn:active {
-    filter: grayscale(0.2) brightness(1.2);
-    transform: scale(0.95);
-}
-.btn,
 .btn-price p {
-    text-decoration: none;
-}
-.btn-price p {
-    margin-top: 5px;
-    font-size: 1.6em;
-    color: #808080;
-    padding: 4px 2px;
-}
-.btn img {
-    justify-self: center;
-    width: 70%;
-}
-span.active {
-    color: #fff;
+    font-size: 20px;
 }
 
-.becoin {
-    width: 100%;
-    height: auto;
-    visibility: hidden;
+@media screen and (max-width: 1000px) {
+    body {
+        height: auto;
+    }
+    .clickercontainer {
+        float: none;
+        margin: 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+    .row {
+        position: relative;
+        float: none;
+        width: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+    }
+    .row .row-btn {
+        float: left;
+        width: 100px;
+        padding: 0;
+    }
+    .wallet {
+        position: relative;
+        bottom: 0;
+        top: 10px;
+    }
+    footer {
+        position: relative;
+        top: 20px;
+    }
 }
-
-.fallingcoin{
-    visibility: visible;
-    left: 38%;
-    position:absolute;
-    top: -350px;
-    width:23%;
-    height: auto;
-    animation: drop 1.3s ease forwards;
-    animation-iteration-count: 1;
-  }
-  
-  @keyframes drop{
-    100%{opacity: 90%;}
-    100%{transform: translateY(800px)}
-    
-  }  
-
 
 
 
