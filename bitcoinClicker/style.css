@@ -1,12 +1,14 @@
-body{
+body {
     background-color: black;
-
 }
 
-h1, h2, h3{
-    font-family: 'Titillium Web', sans-serif;
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+
     text-align: center;
 }
+
 
 footer {
     display: flex;
@@ -18,35 +20,7 @@ footer {
     width: 100%;
     background-color: #c09725;
 }
-
-/* Bitcoin falling to wallet*/
-
-.becoin {
-    width: 100%;
-    height: auto;
-    visibility: hidden;
-}
-
-.fallingcoin{
-    visibility: visible;
-    left: 38%;
-    position:absolute;
-    top: -350px;
-    width:23%;
-    height: auto;
-    animation: drop 1.3s ease forwards;
-    animation-iteration-count: infinite;
-  }
   
-  @keyframes drop{
-    100%{opacity: 50%;}
-    100%{transform: translateY(800px)}
-    
-  }  
-
-   /* /Bitcoin falling to wallet */
-
-
 .wallet {
     position: absolute;
     top: 55%;
@@ -106,6 +80,29 @@ footer {
 span.active {
     color: #fff;
 }
+
+.becoin {
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+}
+
+.fallingcoin{
+    visibility: visible;
+    left: 38%;
+    position:absolute;
+    top: -350px;
+    width:23%;
+    height: auto;
+    animation: drop 1.3s ease forwards;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes drop{
+    100%{opacity: 90%;}
+    100%{transform: translateY(800px)}
+    
+  }  
 
 
 
