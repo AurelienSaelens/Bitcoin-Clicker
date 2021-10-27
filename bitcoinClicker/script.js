@@ -1,16 +1,20 @@
 // general varabiales
 let time = 0;
 
-let score = 123456789;           		// score
+let score = 0;           		// score
 let addScoreClick = 1;          // how many add?
 let nbUpgradeOne = 0;           // number of upgrade one & how much add each second
 let nbUpgradeTwo = 1;
 let nbUpgradeThree = 5;
+let autoClickerPrice = 25;
+let bonusPrice = 200;
+let multiplierPrice = 500;
 let statusUpgradeTwo = 0;
 
 // elements variables
 
 const clickerImg = document.getElementById("clickercontainer");
+const bitresponse = document.querySelector(".becoin");
 
 const upgradeOne = document.getElementById("btn-autoclicker");
 const upgradeTwo = document.getElementById("btn-bonus");
@@ -29,7 +33,6 @@ upgradeOne.addEventListener("click", upgradeOneFun);
 upgradeTwo.addEventListener("click", upgradeTwoFun);
 upgradeThree.addEventListener("click", upgradeThreeFunc);
 
-
 // update dom
 function updateDom() {
 	spanScore.innerHTML = score;
@@ -37,9 +40,9 @@ function updateDom() {
 	spanUpgradeOne.classList.remove("active");
 	spanUpgradeTwo.classList.remove("active");
 	spanUpgradeThird.classList.remove("active");
-	if (score >= 100) {spanUpgradeOne.classList.add("active");}
-	if (score >= 300) {spanUpgradeTwo.classList.add("active");}
-	if (score >= 2000) {spanUpgradeThird.classList.add("active");}
+	if (score >= autoClickerPrice) {spanUpgradeOne.classList.add("active");}
+	if (score >= bonusPrice) {spanUpgradeTwo.classList.add("active");}
+	if (score >= multiplierPrice) {spanUpgradeThird.classList.add("active");}
 }
 
 // addscore onclick of the image
@@ -53,21 +56,35 @@ function reset () {
         nbUpgradeOne = 0;         
         nbUpgradeTwo = 1;
         nbUpgradeThree = 5;
-	time = 29;
-	spanUpgradeThirdmulti.innerHTML = nbUpgradeThree;
-	addScoreClick = 1;
+		time = 29;
+		spanUpgradeThirdmulti.innerHTML = nbUpgradeThree;
+		addScoreClick = 1;
+		document.getElementById('autoClickerPrice').innerHTML = 25;
+		autoClickerPrice = 25;
+		document.getElementById('bonusPrice').innerHTML = 200;
+		bonusPrice = 200;
+		document.getElementById('multiplierPrice').innerHTML = 500;
+		multiplierPrice = 500;
+
         updateDom();
 }
 
+// Bitcoin falls to wallet 
+clickerImg.addEventListener("click", () => {
+	bitresponse.classList.add("fallingcoin");
+});
 
 // upgrade one function
 function upgradeOneFun() {
 	if (spanUpgradeOne.classList.contains("active")) {
 		if (nbUpgradeOne == 0) {
-		setInterval(addPointsEverySecond, 1000);
+			setInterval(addPointsEverySecond, 1000);
 		}
 		nbUpgradeOne++;
-		score -= 100;
+		document.getElementById('score').innerHTML = score;
+		document.getElementById('autoClickerPrice').innerHTML = autoClickerPrice * 2;
+		score -= autoClickerPrice;
+		autoClickerPrice = Math.floor(autoClickerPrice * 2);
 		updateDom();
 	}
 }
@@ -81,7 +98,7 @@ function upgradeTwoFun() {
 	if (spanUpgradeTwo.classList.contains("active")) {
 	        if (statusUpgradeTwo === 0) {
 		        statusUpgradeTwo++;
-			score -= 300;
+
 			var timerbonus = setInterval(function () {
 				time++;
 				spanUpgradeTwoTimer.innerHTML = time;
@@ -94,6 +111,10 @@ function upgradeTwoFun() {
 					statusUpgradeTwo = 0;
 				}
 			}, 1000);
+			document.getElementById('score').innerHTML = score;
+			document.getElementById('bonusPrice').innerHTML = bonusPrice * 2;
+			score -= bonusPrice;
+			bonusPrice = Math.round(bonusPrice * 2);
 			updateDom();
 		}
 	}
@@ -105,11 +126,13 @@ function upgradeThreeFunc() {
 		addScoreClick = nbUpgradeThree;
 		nbUpgradeThree++;
 		spanUpgradeThirdmulti.innerHTML = nbUpgradeThree;
-		score -= 2000;
+		score -= multiplierPrice;
+		document.getElementById('score').innerHTML = score;
+		document.getElementById('multiplierPrice').innerHTML = multiplierPrice * 2;
+		multiplierPrice = Math.round(multiplierPrice * 2);
 		updateDom();
 	}
 }
 updateDom();
-
 
   

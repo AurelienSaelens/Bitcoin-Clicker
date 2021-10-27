@@ -1,5 +1,6 @@
-body {
+body{
     background-color: black;
+
 }
 
 h1, h2, h3{
@@ -17,6 +18,34 @@ footer {
     width: 100%;
     background-color: #c09725;
 }
+
+/* Bitcoin falling to wallet*/
+
+.becoin {
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+}
+
+.fallingcoin{
+    visibility: visible;
+    left: 38%;
+    position:absolute;
+    top: -350px;
+    width:23%;
+    height: auto;
+    animation: drop 1.3s ease forwards;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes drop{
+    100%{opacity: 50%;}
+    100%{transform: translateY(800px)}
+    
+  }  
+
+   /* /Bitcoin falling to wallet */
+
 
 .wallet {
     position: absolute;
@@ -38,6 +67,7 @@ footer {
 }
 .clickercontainer img:hover{ 
     transform: scale(1.02);
+    
 }
 .clickercontainer img:active{ 
     transform: scale(0.98);
@@ -77,29 +107,6 @@ span.active {
     color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-    .wallet {
-        position: absolute;
-        transform: translate3D(-10%, 20%, 0);
-        max-width: 10px;
-}
-    .row {
-        right: 1%;
-        height: 20%;
-        top: 1%;
-    }
-}
-@media screen and (max-width: 992px) {
-    .wallet {
-        position: absolute;
-        width: 10px;
-    }
-    .row {
-        right: 1%;
-        height: 20%;
-        top: 1%;
-    }
-}
 
 
 
