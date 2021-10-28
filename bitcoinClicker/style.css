@@ -6,6 +6,31 @@
     --color-white: #FFF;
     --color-grey: #808080;
 }
+/* Bitcoin falling to wallet*/
+
+.becoin {
+    width: 100%;
+    height: auto;
+    visibility:hidden;
+}
+
+.fallingcoin{
+    visibility: visible;
+    left: 38%;
+    position:absolute;
+    top:80px;
+    width:23%;
+    height: auto;
+    animation: drop 0.3s ease forwards;
+    animation-iteration-count: 1;
+}
+
+  @keyframes drop{
+    
+    0%{opacity: 0}
+    100%{transform: translateY(200px)}
+    
+  }
 
 /* RESET */ 
 
@@ -101,7 +126,7 @@ span.active {
     height: 250px;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 75px;
+    bottom: 150px;
 }
 
 img:hover {
@@ -176,6 +201,4 @@ footer {
         top: 20px;
     }
 }
-
-
 

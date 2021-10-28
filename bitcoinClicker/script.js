@@ -14,6 +14,7 @@ let statusUpgradeTwo = 0;
 // elements variables
 
 const clickerImg = document.getElementById("clickercontainer");
+const bitresponse = document.querySelector(".becoin");
 
 const upgradeOne = document.getElementById("btn-autoclicker");
 const upgradeTwo = document.getElementById("btn-bonus");
@@ -50,6 +51,16 @@ function addScore () {
 	score += addScoreClick * nbUpgradeTwo;
 	updateDom();
 }
+
+// Bitcoin falling to wallet 
+clickerImg.addEventListener("click", () => {
+	bitresponse.classList.add("fallingcoin");
+    setTimeout(stopcoin, 300)
+});
+
+function stopcoin () {
+    bitresponse.classList.remove("fallingcoin");
+};
 
 function reset () {
         score = 0;
@@ -128,5 +139,4 @@ function upgradeThreeFunc() {
 	}
 }
 updateDom();
-
   
